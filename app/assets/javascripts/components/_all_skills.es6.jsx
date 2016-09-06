@@ -1,6 +1,6 @@
 class AllSkills extends React.Component {
   componentDidMount() {
-    console.log("Hello the AllSkills mounted")
+    $.getJSON('/api/v1/skills.json', (response) => { console.table(response) })
   }
 
   render() {
