@@ -5,7 +5,12 @@ class AllSkills extends React.Component {
   }
 
   componentDidMount() {
-    $.getJSON('/api/v1/skills.json', response => { this.setState( {skills: response }) })
+    let request = new Request('/api/v1/skills.json', { method: 'GET' })
+
+    fetch(request)
+      .then(response => response.json())
+      .then(response => this.setState( {skills: response }) )
+      .catch(err => console.log(err))
   }
 
   render() {
