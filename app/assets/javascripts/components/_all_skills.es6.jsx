@@ -5,14 +5,23 @@ class AllSkills extends React.Component {
   }
 
   componentDidMount() {
-    $.getJSON('/api/v1/skills.json', (response) => { this.setState( {skills: response }) })
+    $.getJSON('/api/v1/skills.json', response => { this.setState( {skills: response }) })
   }
 
   render() {
-    console.log("Current State:", this.state)
+    let skills = this.state.skills.map(skill => {
+      return (
+        <div>
+          <h3>{skill.name}</h3>
+          <p>Level: {skill.level}</p>
+          <p>{skill.details}</p>
+        </div>
+      )
+    })
+
     return (
       <div>
-        <h1>Hello! This is AllSkills</h1>
+        {skills}
       </div>
     )
   }
