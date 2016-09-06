@@ -1,4 +1,8 @@
 var AllSkills = React.createClass({
+  componentDidMount() {
+    console.log("Hello the AllSkills mounted")
+  },
+
   render() {
     return (
       <div>
