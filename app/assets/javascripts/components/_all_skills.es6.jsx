@@ -11,7 +11,7 @@ class AllSkills extends React.Component {
   render() {
     let skills = this.state.skills.map(skill => {
       return (
-        <div>
+        <div key={skill.id}>
           <h3>{skill.name}</h3>
           <p>Level: {skill.level}</p>
           <p>{skill.details}</p>
