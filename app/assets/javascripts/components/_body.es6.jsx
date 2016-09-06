@@ -1,14 +1,14 @@
-var Main = React.createClass({
-  render(){
+class Body extends React.Component {
+  render() {
     return (
       <div>
         <div>
-          <Header />
+          < NewSkill/>
         </div>
         <div>
-          <Body />
+          < AllSkills/>
         </div>
       </div>
     )
   }
-})
+}

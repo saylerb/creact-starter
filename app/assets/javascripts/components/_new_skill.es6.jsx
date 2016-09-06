@@ -1,4 +1,4 @@
-var NewSkill = React.createClass({
+class NewSkill extends React.Component {
   render() {
     return (
       <div>
@@ -6,4 +6,4 @@ var NewSkill = React.createClass({
       </div>
     )
   }
-})
+}

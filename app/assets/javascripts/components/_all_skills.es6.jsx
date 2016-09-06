@@ -1,7 +1,7 @@
-var AllSkills = React.createClass({
+class AllSkills extends React.Component {
   componentDidMount() {
     console.log("Hello the AllSkills mounted")
-  },
+  }
 
   render() {
     return (
@@ -10,4 +10,4 @@ var AllSkills = React.createClass({
       </div>
     )
   }
-})
+}
