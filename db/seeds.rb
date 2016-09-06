@@ -9,10 +9,10 @@ class Seed
   end
 
   def generate_skills
-    50.times do
+    10.times do
       skill = Skill.new
-      skill.name = Faker::Lorem.word
-      skill.details = Faker::Lorem.sentence(100)
+      skill.name = Faker::Hacker.ingverb + " " + Faker::Hacker.adjective + " " + Faker::Hacker.noun
+      skill.details = Faker::Hacker.say_something_smart
       skill.level = [0, 1, 2].sample
       skill.save!
       puts "Generated skill # #{skill.id}"
