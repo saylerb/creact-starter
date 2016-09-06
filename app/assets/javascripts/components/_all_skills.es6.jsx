@@ -1,6 +1,7 @@
 class AllSkills extends React.Component {
-  getInitialState() {
-    return { skills: [] }
+  constructor() {
+    super()
+    this.state = { skills: [] }
   }
 
   componentDidMount() {
